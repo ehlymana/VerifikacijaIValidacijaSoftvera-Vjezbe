@@ -1,8 +1,0 @@
-c:\users\haris\documents\visual studio 2012\Projects\ZivotinjskoCarstvo\ZivotinjskoCarstvo\bin\Debug\ZivotinjskoCarstvo.exe.config
-C:\Users\Ehlimana\Documents\VVS\Laboratorijska Vježba 2. (Unit Testiranje)\VVS Vježba 5 - Resursi\ZivotinjskoCarstvo\ZivotinjskoCarstvo\bin\Debug\ZivotinjskoCarstvo.exe.config
-C:\Users\Ehlimana\Documents\VVS\Laboratorijska Vježba 2. (Unit Testiranje)\VVS Vježba 5 - Resursi\ZivotinjskoCarstvo\ZivotinjskoCarstvo\bin\Debug\ZivotinjskoCarstvo.exe
-C:\Users\Ehlimana\Documents\VVS\Laboratorijska Vježba 2. (Unit Testiranje)\VVS Vježba 5 - Resursi\ZivotinjskoCarstvo\ZivotinjskoCarstvo\bin\Debug\ZivotinjskoCarstvo.pdb
-C:\Users\Ehlimana\Documents\VVS\Laboratorijska Vježba 2. (Unit Testiranje)\VVS Vježba 5 - Resursi\ZivotinjskoCarstvo\ZivotinjskoCarstvo\obj\Debug\ZivotinjskoCarstvo.csprojAssemblyReference.cache
-C:\Users\Ehlimana\Documents\VVS\Laboratorijska Vježba 2. (Unit Testiranje)\VVS Vježba 5 - Resursi\ZivotinjskoCarstvo\ZivotinjskoCarstvo\obj\Debug\ZivotinjskoCarstvo.csproj.CoreCompileInputs.cache
-C:\Users\Ehlimana\Documents\VVS\Laboratorijska Vježba 2. (Unit Testiranje)\VVS Vježba 5 - Resursi\ZivotinjskoCarstvo\ZivotinjskoCarstvo\obj\Debug\ZivotinjskoCarstvo.exe
-C:\Users\Ehlimana\Documents\VVS\Laboratorijska Vježba 2. (Unit Testiranje)\VVS Vježba 5 - Resursi\ZivotinjskoCarstvo\ZivotinjskoCarstvo\obj\Debug\ZivotinjskoCarstvo.pdb
