@@ -1,0 +1,15 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\PrivatnaKlinika\PrivatnaKlinika\bin\Debug\PrivatnaKlinika.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\PrivatnaKlinika\PrivatnaKlinika\bin\Debug\PrivatnaKlinika.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.pdb
+C:\Users\Ehlimana\Desktop\PrivatnaKlinika\PrivatnaKlinika\bin\Debug\PrivatnaKlinika.dll
+C:\Users\Ehlimana\Desktop\PrivatnaKlinika\PrivatnaKlinika\bin\Debug\PrivatnaKlinika.pdb
+C:\Users\Ehlimana\Desktop\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.csprojAssemblyReference.cache
+C:\Users\Ehlimana\Desktop\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.dll
+C:\Users\Ehlimana\Desktop\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.pdb
+C:\Users\Ehlimana\Desktop\VerifikacijaIValidacijaSoftvera-Vjezbe\PrivatnaKlinika\PrivatnaKlinika\bin\Debug\PrivatnaKlinika.dll
+C:\Users\Ehlimana\Desktop\VerifikacijaIValidacijaSoftvera-Vjezbe\PrivatnaKlinika\PrivatnaKlinika\bin\Debug\PrivatnaKlinika.pdb
+C:\Users\Ehlimana\Desktop\VerifikacijaIValidacijaSoftvera-Vjezbe\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.csprojAssemblyReference.cache
+C:\Users\Ehlimana\Desktop\VerifikacijaIValidacijaSoftvera-Vjezbe\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.dll
+C:\Users\Ehlimana\Desktop\VerifikacijaIValidacijaSoftvera-Vjezbe\PrivatnaKlinika\PrivatnaKlinika\obj\Debug\PrivatnaKlinika.pdb
