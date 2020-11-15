@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinder.ba", "Tinder.ba\Tinder.ba.csproj", "{D7FE046C-6489-407A-A3FA-7ECD6FA07844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Testovi", "Unit Testovi\Unit Testovi.csproj", "{8A94EE8B-D54E-4860-AC00-00F9DB3EE51B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7FE046C-6489-407A-A3FA-7ECD6FA07844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7FE046C-6489-407A-A3FA-7ECD6FA07844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7FE046C-6489-407A-A3FA-7ECD6FA07844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7FE046C-6489-407A-A3FA-7ECD6FA07844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A94EE8B-D54E-4860-AC00-00F9DB3EE51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A94EE8B-D54E-4860-AC00-00F9DB3EE51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A94EE8B-D54E-4860-AC00-00F9DB3EE51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A94EE8B-D54E-4860-AC00-00F9DB3EE51B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3B7342F-B9D6-4456-8957-8CED73A8843A}
+	EndGlobalSection
+EndGlobal

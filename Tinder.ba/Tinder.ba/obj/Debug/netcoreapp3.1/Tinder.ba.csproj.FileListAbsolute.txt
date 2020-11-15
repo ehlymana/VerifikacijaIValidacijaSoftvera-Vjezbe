@@ -1,0 +1,18 @@
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\bin\Debug\netcoreapp3.1\Tinder.ba.deps.json
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\bin\Debug\netcoreapp3.1\Tinder.ba.dll
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\bin\Debug\netcoreapp3.1\Tinder.ba.pdb
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.csprojAssemblyReference.cache
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.AssemblyInfo.cs
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.dll
+C:\Users\Ehlimana\Desktop\r\rs3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\bin\Debug\netcoreapp3.1\Tinder.ba.deps.json
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\bin\Debug\netcoreapp3.1\Tinder.ba.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\bin\Debug\netcoreapp3.1\Tinder.ba.pdb
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.csprojAssemblyReference.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.AssemblyInfoInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.AssemblyInfo.cs
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.csproj.CoreCompileInputs.cache
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.dll
+D:\D\Ehlimana\Documents\VVS\Zadaća br. 2 (Unit Testiranje)\Grupa RS-3\Tinder.ba\Tinder.ba\obj\Debug\netcoreapp3.1\Tinder.ba.pdb

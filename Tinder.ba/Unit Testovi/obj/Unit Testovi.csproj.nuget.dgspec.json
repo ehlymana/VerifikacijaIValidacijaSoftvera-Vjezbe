@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Unit Testovi\\Unit Testovi.csproj": {}
+  },
+  "projects": {
+    "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj",
+        "projectName": "Tinder.ba",
+        "projectPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj",
+        "packagesPath": "C:\\Users\\Ehlimana\\.nuget\\packages\\",
+        "outputPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ehlimana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Unit Testovi\\Unit Testovi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Unit Testovi\\Unit Testovi.csproj",
+        "projectName": "Unit Testovi",
+        "projectPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Unit Testovi\\Unit Testovi.csproj",
+        "packagesPath": "C:\\Users\\Ehlimana\\.nuget\\packages\\",
+        "outputPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Unit Testovi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ehlimana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj": {
+                "projectPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
