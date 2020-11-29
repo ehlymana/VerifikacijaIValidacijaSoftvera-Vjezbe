@@ -85,7 +85,7 @@ namespace Tinder.ba
             {
                 foreach (Poruka x in poruke)
                 {
-                    if (x.Primalac.Equals(k)) poruke_korisnika.Add(x);
+                    if (x.Posiljalac.Equals(k)) poruke_korisnika.Add(x);
                 }
             }
             if (poruke_korisnika.Count == 0) throw new Exception();

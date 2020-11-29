@@ -150,9 +150,23 @@ namespace Tinder.ba
         /// </summary>
         public void RazvediSe()
         {
-            throw new NotImplementedException();
+            Razvod = true;
+            ZeljeniMinGodina = godine - 4;
+            ZeljeniMaxGodina = godine + 4;
+            foreach (string name in Enum.GetNames(typeof(Lokacija)))
+            {
+                if (name == lokacija.ToString() && (name == "Trebinje" || name == "Mostar"))
+                {
+                    ZeljenaLokacija = Lokacija.Mostar;
+                }
+                else if (name == lokacija.ToString())
+                {
+                    ZeljenaLokacija = Lokacija.Banja_Luka;
+                }
+            }
+
         }
 
-        #endregion
-    }
+    #endregion
+}
 }

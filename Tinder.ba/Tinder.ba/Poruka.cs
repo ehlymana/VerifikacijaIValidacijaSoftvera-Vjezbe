@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Tinder.ba
 {
@@ -62,7 +60,54 @@ namespace Tinder.ba
         /// <returns></returns>
         public int IzračunajPotencijalPoruke()
         {
-            throw new NotImplementedException();
+            int MaxPotencijal = 0;
+            if (sadrzaj.Contains("volim"))
+            {
+                MaxPotencijal += 20;
+            }
+            if (sadrzaj.Contains("ljubav"))
+            {
+                MaxPotencijal += 20;
+            }
+            if (sadrzaj.Contains("slobodan"))
+            {
+                MaxPotencijal += 20;
+            }
+            if (sadrzaj.Contains("slobodna"))
+            {
+                MaxPotencijal += 20;
+            }
+            if (sadrzaj.Contains("hoću"))
+            {
+                MaxPotencijal += 20;
+            }
+
+            if (sadrzaj.Contains("bježi"))
+            {
+                MaxPotencijal -= 20;
+            }
+            if (sadrzaj.Contains("neću"))
+            {
+                MaxPotencijal -= 20;
+            }
+            if (sadrzaj.Contains("oženjen"))
+            {
+                MaxPotencijal -= 20;
+            }
+            if (sadrzaj.Contains("udata"))
+            {
+                MaxPotencijal -= 20;
+            }
+            if (sadrzaj.Contains("neistina"))
+            {
+                MaxPotencijal -= 20;
+            }
+
+            if (MaxPotencijal < 0)
+            {
+                MaxPotencijal = 0;
+            }
+            return MaxPotencijal;
         }
 
         #endregion
