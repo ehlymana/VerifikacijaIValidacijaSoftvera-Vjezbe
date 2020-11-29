@@ -5732,19 +5732,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ehlimana\\.nuget\\packages\\": {}
+    "C:\\Users\\Amira\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Unit Testovi\\Unit Testovi.csproj",
+      "projectUniqueName": "C:\\Users\\Amira\\Desktop\\Zadaća2VVS\\VerifikacijaIValidacijaSoftvera-Vjezbe\\Tinder.ba\\Unit Testovi\\Unit Testovi.csproj",
       "projectName": "Unit Testovi",
-      "projectPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Unit Testovi\\Unit Testovi.csproj",
-      "packagesPath": "C:\\Users\\Ehlimana\\.nuget\\packages\\",
-      "outputPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Unit Testovi\\obj\\",
+      "projectPath": "C:\\Users\\Amira\\Desktop\\Zadaća2VVS\\VerifikacijaIValidacijaSoftvera-Vjezbe\\Tinder.ba\\Unit Testovi\\Unit Testovi.csproj",
+      "packagesPath": "C:\\Users\\Amira\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Amira\\Desktop\\Zadaća2VVS\\VerifikacijaIValidacijaSoftvera-Vjezbe\\Tinder.ba\\Unit Testovi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ehlimana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Amira\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5757,8 +5757,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj": {
-              "projectPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj"
+            "C:\\Users\\Amira\\Desktop\\Zadaća2VVS\\VerifikacijaIValidacijaSoftvera-Vjezbe\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj": {
+              "projectPath": "C:\\Users\\Amira\\Desktop\\Zadaća2VVS\\VerifikacijaIValidacijaSoftvera-Vjezbe\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj"
             }
           }
         }

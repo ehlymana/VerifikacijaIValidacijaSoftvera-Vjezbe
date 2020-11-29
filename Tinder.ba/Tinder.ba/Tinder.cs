@@ -91,7 +91,28 @@ namespace Tinder.ba
         /// <returns></returns>
         public List<Tuple<Korisnik, Korisnik>> DajSveKompatibilneKorisnike()
         {
-            throw new NotImplementedException();
+            List<Tuple<Korisnik, Korisnik>> lista = new List<Tuple<Korisnik, Korisnik>>();
+            foreach (Korisnik x in korisnici)
+            {
+                for(int i = 0; i < korisnici.Count; i++)
+                {
+                    if (x.Lokacija.Equals(korisnici[i].ZeljenaLokacija) && korisnici[i].Lokacija.Equals(x.ZeljenaLokacija)
+                        && ((x.Godine > korisnici[i].ZeljeniMinGodina && x.Godine < korisnici[i].ZeljeniMaxGodina) && (korisnici[i].Godine > x.ZeljeniMinGodina && korisnici[i].Godine < x.ZeljeniMaxGodina)))
+                            lista.Add(Tuple.Create(x, korisnici[i]));
+                }
+            }
+            if (lista.Count > 0)
+            {
+                foreach (Tuple<Korisnik, Korisnik> x in lista.ToArray())
+                {
+                    for (int i = 0; i < lista.Count; i++)
+                    {
+                        if (x.Item1 == lista[i].Item2 && x.Item2 == lista[i].Item1) lista.Remove(x);
+                    }
+                }
+            }
+            if (lista.Count == 0) throw new Exception();
+            else return lista;
         }
 
         public bool DaLiJeSpajanjeUspjesno(Chat c, IRecenzija r)

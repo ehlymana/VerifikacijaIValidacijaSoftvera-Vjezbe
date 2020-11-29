@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Ehlimana\\.nuget\\packages\\": {}
+    "C:\\Users\\Amira\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj",
+      "projectUniqueName": "C:\\Users\\Amira\\Desktop\\Zadaća2VVS\\VerifikacijaIValidacijaSoftvera-Vjezbe\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj",
       "projectName": "Tinder.ba",
-      "projectPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj",
-      "packagesPath": "C:\\Users\\Ehlimana\\.nuget\\packages\\",
-      "outputPath": "D:\\D\\Ehlimana\\Documents\\VVS\\Zadaća br. 2 (Unit Testiranje)\\Grupa RS-3\\Tinder.ba\\Tinder.ba\\obj\\",
+      "projectPath": "C:\\Users\\Amira\\Desktop\\Zadaća2VVS\\VerifikacijaIValidacijaSoftvera-Vjezbe\\Tinder.ba\\Tinder.ba\\Tinder.ba.csproj",
+      "packagesPath": "C:\\Users\\Amira\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Amira\\Desktop\\Zadaća2VVS\\VerifikacijaIValidacijaSoftvera-Vjezbe\\Tinder.ba\\Tinder.ba\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ehlimana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Amira\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

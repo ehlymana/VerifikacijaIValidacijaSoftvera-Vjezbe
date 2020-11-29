@@ -52,16 +52,31 @@ namespace Unit_Testovi
         {
             Korisnik k1 = new Korisnik("user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
             Korisnik k2 = new Korisnik("user2", "user2*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+            Korisnik k3 = new Korisnik("user3", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
 
             Tinder.ba.Tinder t = new Tinder.ba.Tinder();
             t.DodavanjeRazgovora(new List<Korisnik>() { k1, k2 }, false);
             Chat chat = t.Razgovori[0];
             chat.Poruke.Add(new Poruka(k1, k2, "volim te!"));
             chat.Poruke.Add(new Poruka(k2, k1, "bježi, neću!"));
-
+            chat.DajSvePorukeOdKorisnika(k1);
+            Assert.AreEqual(chat.DajSvePorukeOdKorisnika(k3).Count, 0);
             int potencijal = t.PotencijalChata(chat);
 
             Assert.AreEqual(potencijal, 20);
+        }
+        [TestMethod]
+        public void TestZaTinder()
+        {
+            Korisnik k1 = new Korisnik("user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false, 24, 30);
+            Korisnik k2 = new Korisnik("user2", "user2*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 28, false, 19, 23);
+            //Korisnik k3 = new Korisnik("user3", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+
+            Tinder.ba.Tinder t = new Tinder.ba.Tinder();
+            t.Korisnici.Add(k1);
+            t.Korisnici.Add(k2);
+            Assert.AreEqual(1, t.DajSveKompatibilneKorisnike().Count);
+
         }
 
         [TestMethod]

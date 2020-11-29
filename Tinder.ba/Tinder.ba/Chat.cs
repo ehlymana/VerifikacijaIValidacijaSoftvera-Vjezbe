@@ -80,7 +80,16 @@ namespace Tinder.ba
         /// <returns></returns>
         public List<Poruka> DajSvePorukeOdKorisnika(Korisnik k)
         {
-            throw new NotImplementedException();
+            List<Poruka> poruke_korisnika = new List<Poruka>();
+            if (poruke.Count > 0)
+            {
+                foreach (Poruka x in poruke)
+                {
+                    if (x.Primalac.Equals(k)) poruke_korisnika.Add(x);
+                }
+            }
+            if (poruke_korisnika.Count == 0) throw new Exception();
+            else return poruke_korisnika;
         }
 
         #endregion
