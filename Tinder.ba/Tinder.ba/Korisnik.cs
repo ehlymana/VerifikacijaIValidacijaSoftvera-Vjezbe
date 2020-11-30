@@ -148,6 +148,8 @@ namespace Tinder.ba
         /// Željena lokacija se postavlja na Mostar za sve gradove iz Hercegovine, a na Banja Luku za sve gradove
         /// iz Bosne.
         /// </summary>
+        
+        //Arijana Čolak
         public void RazvediSe()
         {
             Razvod = true;

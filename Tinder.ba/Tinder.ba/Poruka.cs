@@ -58,6 +58,8 @@ namespace Tinder.ba
         /// Ukoliko poruka sadrži riječi "volim", "ljubav", "slobodan", "slobodna" ili "hoću" potencijal se povećava za 20 po prisutnoj riječi.
         /// </summary>
         /// <returns></returns>
+    
+        //Ajla Habib
         public int IzračunajPotencijalPoruke()
         {
             int MaxPotencijal = 0;

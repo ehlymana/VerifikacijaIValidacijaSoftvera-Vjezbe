@@ -89,6 +89,7 @@ namespace Tinder.ba
         /// i ukoliko se godine k1 nalaze između minimalnih i maksimalnih željenih godina k2 i obrnuto.
         /// </summary>
         /// <returns></returns>
+        //Amira Kurtagić
         public List<Tuple<Korisnik, Korisnik>> DajSveKompatibilneKorisnike()
         {
             List<Tuple<Korisnik, Korisnik>> lista = new List<Tuple<Korisnik, Korisnik>>();

@@ -78,6 +78,7 @@ namespace Tinder.ba
         /// </summary>
         /// <param name="k"></param>
         /// <returns></returns>
+        //Arijana Čolak, Ajla Habib, Amira Kurtagić
         public List<Poruka> DajSvePorukeOdKorisnika(Korisnik k)
         {
             List<Poruka> poruke_korisnika = new List<Poruka>();
