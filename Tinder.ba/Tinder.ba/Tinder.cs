@@ -130,7 +130,14 @@ namespace Tinder.ba
 
         public int PotencijalChata(Chat c)
         {
-            throw new NotImplementedException();
+            int potencijal = 0;
+            foreach(Poruka x in c.Poruke)
+            {
+                potencijal += x.IzračunajPotencijalPoruke();
+            }
+            if (potencijal > 100) potencijal = 100;
+            else if (potencijal < 0) potencijal = 0;
+            return potencijal;
         }
         #endregion
     }

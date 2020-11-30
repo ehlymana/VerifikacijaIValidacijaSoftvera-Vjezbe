@@ -8,7 +8,6 @@ namespace Unit_Testovi
     [TestClass]
     public class NoviTestovi
     {
-        Recenzija r;
         #region Zamjenski Objekti
       
         public class  Stub: IRecenzija
@@ -29,7 +28,7 @@ namespace Unit_Testovi
             chat.Poruke.Add(new Poruka(k1, k2, "volim te, slobodan sam i slobodna si! hoću ljubav!"));
             IRecenzija r = new Stub();
             Tinder.ba.Tinder t = new Tinder.ba.Tinder();
-            bool uspješnost = t.DaLiJeSpajanjeUspjesno(chat, new Stub());
+            bool uspješnost = t.DaLiJeSpajanjeUspjesno(chat, r);
 
             Assert.IsTrue(uspješnost);
         }
@@ -67,8 +66,6 @@ namespace Unit_Testovi
             Chat chat = t.Razgovori[0];
             chat.Poruke.Add(new Poruka(k1, k2, "volim te!"));
             chat.Poruke.Add(new Poruka(k2, k1, "bježi, neću!"));
-            chat.DajSvePorukeOdKorisnika(k1);
-            Assert.AreEqual(chat.DajSvePorukeOdKorisnika(k3).Count, 0);
             int potencijal = t.PotencijalChata(chat);
 
             Assert.AreEqual(potencijal, 20);
