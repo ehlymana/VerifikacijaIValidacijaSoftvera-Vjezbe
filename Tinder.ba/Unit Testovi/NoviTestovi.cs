@@ -8,7 +8,16 @@ namespace Unit_Testovi
     [TestClass]
     public class NoviTestovi
     {
+        Recenzija r;
         #region Zamjenski Objekti
+      
+        public class  Stub: IRecenzija
+        {
+            public string DajUtisak()
+            {
+                return "Pozitivan";
+            }
+        }
 
         [TestMethod]
         public void TestZamjenskiObjekti()
@@ -16,12 +25,11 @@ namespace Unit_Testovi
             Korisnik k1 = new Korisnik("user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
             Korisnik k2 = new Korisnik("user2", "user2*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
 
-            Chat chat = new Chat(k1, k2);
+            Chat chat = new Chat(k1, k2);;
             chat.Poruke.Add(new Poruka(k1, k2, "volim te, slobodan sam i slobodna si! hoću ljubav!"));
-            IRecenzija r = new Recenzija();
-
+            IRecenzija r = new Stub();
             Tinder.ba.Tinder t = new Tinder.ba.Tinder();
-            bool uspješnost = t.DaLiJeSpajanjeUspjesno(chat, r);
+            bool uspješnost = t.DaLiJeSpajanjeUspjesno(chat, new Stub());
 
             Assert.IsTrue(uspješnost);
         }
