@@ -130,6 +130,7 @@ namespace Tinder.ba
 
         public int PotencijalChata(Chat c)
         {
+            if (c is GrupniChat) throw new InvalidOperationException("Izuzetak");
             int potencijal = 0;
             foreach(Poruka x in c.Poruke)
             {
