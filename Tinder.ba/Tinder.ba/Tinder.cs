@@ -99,7 +99,8 @@ namespace Tinder.ba
                 {
                     if (x.Lokacija.Equals(korisnici[i].ZeljenaLokacija) && korisnici[i].Lokacija.Equals(x.ZeljenaLokacija)
                         && ((x.Godine > korisnici[i].ZeljeniMinGodina && x.Godine < korisnici[i].ZeljeniMaxGodina) && (korisnici[i].Godine > x.ZeljeniMinGodina && korisnici[i].Godine < x.ZeljeniMaxGodina)))
-                            lista.Add(Tuple.Create(x, korisnici[i]));
+                        if (x.Ime.Equals(korisnici[i].Ime) && x.Password.Equals(korisnici[i].Password) && x.Godine.Equals(korisnici[i].Godine)) continue;  
+                       else lista.Add(Tuple.Create(x, korisnici[i]));
                 }
             }
             if (lista.Count > 0)
