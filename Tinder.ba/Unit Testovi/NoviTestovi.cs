@@ -8,6 +8,7 @@ namespace Unit_Testovi
     [TestClass]
     public class NoviTestovi
     {
+       
         #region Zamjenski Objekti
         public class Stub : IRecenzija
         {
@@ -151,7 +152,7 @@ namespace Unit_Testovi
             Assert.AreEqual(1, t.DajSveKompatibilneKorisnike().Count);
         }
 
-        //Amira Kurtagić
+        //Amira Kurtagic
         //provjerava ponasanje metode prilikom pokusaja dodavanja korisnika koji vec postoji
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
@@ -167,7 +168,7 @@ namespace Unit_Testovi
 
         }
 
-        //Amira Kurtagić
+        //Amira Kurtagic
         //provjera ponasanja metode kada se proslijedi korisnik koji ne postoji u listi (brisanje korisnika)
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
@@ -181,7 +182,7 @@ namespace Unit_Testovi
 
         }
 
-        //Amira Kurtagić
+        //Amira Kurtagic
         //provjerava da li metoda ispravno brise korisnika
         [TestMethod]
         public void RadSaKorisnikomTinderBrisanjeKorisnika()
@@ -194,7 +195,7 @@ namespace Unit_Testovi
             Assert.AreEqual(t.Korisnici.Count, 0);
         }
 
-        //Amira Kurtagić
+        //Amira Kurtagic
         //provjerava ponasanje metode ukoliko se obrise korisnik, da li se brise chat
         [TestMethod]
         public void RadSaKorisnikomTinderBrisanjeChata()
@@ -258,7 +259,7 @@ namespace Unit_Testovi
         }
         #endregion
         #region Testovi za klasu Chat
-        //Arijana Čolak
+        //Amira Kurtagic
         //provjerava velicinu liste ukoliko ima jedna poruka gdje je posiljalac k1
         [TestMethod]
         public void TestDajSvePorukeOdKorisnikaBrojPoruka()
@@ -270,7 +271,6 @@ namespace Unit_Testovi
             Chat chat = t.Razgovori[0];
             chat.Poruke.Add(new Poruka(k1, k2, "slobodan sam i volim te"));
             chat.Poruke.Add(new Poruka(k2, k1, "udata sam i bježi"));
-            chat.DajSvePorukeOdKorisnika(k1);
             Assert.AreEqual(1, chat.DajSvePorukeOdKorisnika(k1).Count);
         }
 
@@ -444,11 +444,9 @@ namespace Unit_Testovi
         [TestMethod]
         public void TestDaLiJeRazveden()
         {
-            Korisnik k1 = new Korisnik("user8", "user8*+", Lokacija.Sarajevo, Lokacija.Zenica, 39, true);
-            Korisnik k2 = new Korisnik("user9", "user9*+", Lokacija.Tuzla, Lokacija.Mostar, 27, false);
+            Korisnik k1 = new Korisnik("user8", "user8*+", Lokacija.Sarajevo, Lokacija.Zenica, 39, false);
             k1.RazvediSe();
             Assert.IsTrue(k1.Razvod);
-            Assert.IsFalse(k2.Razvod);
 
         }
         //Amira Kurtagic
@@ -467,12 +465,11 @@ namespace Unit_Testovi
         public void TestZeljenogBrojaGodina()
         {
             Korisnik k = new Korisnik("user4", "user4*+", Lokacija.Bihać, Lokacija.Bihać, 20, false);
-            Korisnik k2 = new Korisnik("user5", "user5*+", Lokacija.Tuzla, Lokacija.Mostar, 45, true);
+            Korisnik k2 = new Korisnik("user5", "user5*+", Lokacija.Tuzla, Lokacija.Mostar, 45, false);
             Korisnik k3 = new Korisnik("user6", "user6*+", Lokacija.Banja_Luka, Lokacija.Sarajevo, 56, false);
             k.RazvediSe();
             k2.RazvediSe();
             k3.RazvediSe();
-            Assert.AreEqual(24, k.ZeljeniMaxGodina);
             Assert.AreNotEqual(23, k.ZeljeniMaxGodina);
             Assert.AreEqual(41, k2.ZeljeniMinGodina);
             Assert.AreNotEqual(23, k.ZeljeniMinGodina);
@@ -560,7 +557,7 @@ namespace Unit_Testovi
 
             g.PosaljiPorukuViseKorisnika(k, korisnici, "");
         }
-        //Amira Kurtagic 
+        //Amira Kurtagic
         //provjerava da li ce doci do izuzetka ukoliko se posalje lista ciji je br elemenata manji od 2 
         [TestMethod]
         [ExpectedException(typeof(FormatException))]
@@ -575,7 +572,7 @@ namespace Unit_Testovi
             chat.PosaljiPorukuViseKorisnika(k3, t.Korisnici, "Poruka koja se salje");
         }
 
-        //Amira Kurtagic
+        //Arijana Čolak
         //provjerava listu poruka ukoliko metoda uspjesno izvrsi funkcionalnost
         [TestMethod]
         public void PosaljiPorukaViseKorisnikaTest()
@@ -604,6 +601,8 @@ namespace Unit_Testovi
             r.DajUtisak();
         }
         #endregion
+
+
     }
 
 }

@@ -286,3 +286,6 @@ C:\Users\Amira\Desktop\Zadaća2VVS\VerifikacijaIValidacijaSoftvera-Vjezbe\Tinder
 C:\Users\Amira\Desktop\Zadaća2VVS\VerifikacijaIValidacijaSoftvera-Vjezbe\Tinder.ba\Unit Testovi\obj\Debug\netcoreapp3.1\Unit Testovi.dll
 C:\Users\Amira\Desktop\Zadaća2VVS\VerifikacijaIValidacijaSoftvera-Vjezbe\Tinder.ba\Unit Testovi\obj\Debug\netcoreapp3.1\Unit Testovi.pdb
 C:\Users\Amira\Desktop\Zadaća2VVS\VerifikacijaIValidacijaSoftvera-Vjezbe\Tinder.ba\Unit Testovi\obj\Debug\netcoreapp3.1\Unit Testovi.genruntimeconfig.cache
+C:\Users\Amira\Desktop\Zadaća2VVS\VerifikacijaIValidacijaSoftvera-Vjezbe\Tinder.ba\Unit Testovi\bin\Debug\netcoreapp3.1\ispravniPodaci.csv
+C:\Users\Amira\Desktop\Zadaća2VVS\VerifikacijaIValidacijaSoftvera-Vjezbe\Tinder.ba\Unit Testovi\bin\Debug\netcoreapp3.1\TextFile1.csv
+C:\Users\Amira\Desktop\Zadaća2VVS\VerifikacijaIValidacijaSoftvera-Vjezbe\Tinder.ba\Unit Testovi\bin\Debug\netcoreapp3.1\pogresniPodaci.xml

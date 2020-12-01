@@ -129,6 +129,7 @@ namespace Tinder.ba
                 return false;
         }
 
+        //Arijana Čolak, Ajla Habib, Amira Kurtagić
         public int PotencijalChata(Chat c)
         {
             if (c is GrupniChat) throw new InvalidOperationException();
