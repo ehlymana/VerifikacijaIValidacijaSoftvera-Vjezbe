@@ -131,6 +131,7 @@ namespace Tinder.ba
         }
 
         //Arijana Čolak, Ajla Habib, Amira Kurtagić
+        //prolazi kroz sve poruke iz chata i na potencijal chata dodaje potencijale poruka posebno
         public int PotencijalChata(Chat c)
         {
             if (c is GrupniChat) throw new InvalidOperationException();

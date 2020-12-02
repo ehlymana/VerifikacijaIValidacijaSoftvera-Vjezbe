@@ -8,7 +8,45 @@ namespace Unit_Testovi
     [TestClass]
     public class NoviTestovi
     {
-       
+
+        static IEnumerable<object[]> Data
+        {
+            get
+            {
+                return new[]
+                {
+                    new object[] { "user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false},
+                    new object[] {  "user2", "user2*+", Lokacija.Banja_Luka, Lokacija.Mostar, 45, false},
+                    new object[] {  "user3", "user3*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 28, false}
+                };
+            }
+        }
+
+        static IEnumerable<object[]> WrongData
+        {
+            get
+            {
+                return new[]
+                {
+                    new object[] { "user1", "user1", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, true},
+                    new object[] {  "user2", "", Lokacija.Banja_Luka, Lokacija.Mostar, 45, true},
+                    new object[] {  "user3", "u", Lokacija.Sarajevo, Lokacija.Sarajevo, 28, false}
+                };
+            }
+        }
+
+        static IEnumerable<object[]> WrongData2
+        {
+            get
+            {
+                return new[]
+                {
+                    new object[] { "user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 17, false},
+                    new object[] {  "user2", "user2*+", Lokacija.Banja_Luka, Lokacija.Mostar, 15, false},
+                    new object[] {  "user3", "user3*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 10, false}
+                };
+            }
+        }
         #region Zamjenski Objekti
         public class Stub : IRecenzija
         {
@@ -701,6 +739,65 @@ namespace Unit_Testovi
         }
         #endregion
 
+        //Arijana Čolak
+        //provjeravamo ispravnost postavljanja proslijedjenog imena
+        [TestMethod]
+        [DynamicData("Data")]
+        public void DataDrivenTestiranjeImena(string name, string pass, Lokacija location, Lokacija desiredLoc, int age, bool divorced)
+        {
+            Korisnik k = new Korisnik(name, pass, location, desiredLoc, age, divorced);
+            Assert.AreEqual(k.Ime, name);
+        }
+
+        //Arijana Čolak
+        //provjeravamo ispravnost postavljanja proslijedjenog statusa razvoda
+        [TestMethod]
+        [DynamicData("Data")]
+        public void DataDrivenTestiranjeRazvod(string name, string pass, Lokacija location, Lokacija desiredLoc, int age, bool divorced)
+        {
+            Korisnik k = new Korisnik(name, pass, location, desiredLoc, age, divorced);
+            Assert.IsFalse(k.Razvod);
+        }
+
+        //Ajla Habib
+        //provjeravamo ispravnost passworda 
+        [TestMethod]
+        [DynamicData("Data")]
+        public void DataDrivenTestiranjePassworda(string name, string pass, Lokacija location, Lokacija desiredLoc, int age, bool divorced)
+        {
+            Korisnik k = new Korisnik(name, pass, location, desiredLoc, age, divorced);
+            Assert.AreEqual(k.Password, pass);
+        }
+
+        //Ajla Habib
+        //provjeravamo ispravnost proslijedjene lokacije
+        [TestMethod]
+        [DynamicData("Data")]
+        public void DataDrivenTestiranjeLokacija(string name, string pass, Lokacija location, Lokacija desiredLoc, int age, bool divorced)
+        {
+            Korisnik k = new Korisnik(name, pass, location, desiredLoc, age, divorced);
+            Assert.AreEqual(k.Lokacija, location);
+        }
+
+        //Amira Kurtagić
+        //provjeravamo da li ce doci do izuzetka ukoliko proslijedimo neispravan password
+        [TestMethod]
+        [DynamicData("WrongData")]
+        [ExpectedException(typeof(System.FormatException))]
+        public void DataDrivenTestiranjeIzuzetak(string name, string pass, Lokacija location, Lokacija desiredLoc, int age, bool divorced)
+        {
+            Korisnik k = new Korisnik(name, pass, location, desiredLoc, age, divorced);
+        }
+
+        //Amira Kurtagić
+        //provjeravamo da li ce doci do izuzetka ukoliko proslijedimo pogresne godine korisnika
+        [TestMethod]
+        [DynamicData("WrongData2")]
+        [ExpectedException(typeof(System.FormatException))]
+        public void DataDrivenTestiranjeIzuzetakGodine(string name, string pass, Lokacija location, Lokacija desiredLoc, int age, bool divorced)
+        {
+            Korisnik k = new Korisnik(name, pass, location, desiredLoc, age, divorced);
+        }
 
     }
 
