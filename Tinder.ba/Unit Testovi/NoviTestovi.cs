@@ -86,6 +86,8 @@ namespace Unit_Testovi
 
             int potencijal = t.PotencijalChata(chat);
         }
+        //Ajla Habib
+        //provjeravamo da li ce potencijal biti ispod nule, a trebao bi biti 0 ukoliko posaljemo rijeci koje umanjuju potencijal
         [TestMethod]
         public void TestPotencijalChataIspodNule()
         {
@@ -103,6 +105,8 @@ namespace Unit_Testovi
             Assert.AreEqual(potencijal, 0);
         }
 
+        //Ajla Habib
+        //provjerava da li ce potencijal biti iznad 100 (ne bi trebao biti jer je max potencijal 100), ukoliko proslijedimo rijeci koje uvecavaju potencijal
         [TestMethod]
         public void TestPotencijalChataIznadSto()
         {
@@ -250,6 +254,8 @@ namespace Unit_Testovi
             Assert.AreEqual(t.Razgovori.Count, 0);
         }
 
+        //Arijana Colak
+        //provjerava da li ce korisnik biti dodat u listu
         [TestMethod]
         public void TestRadSaKorisnikomDodavanjeKorisnika()
         {
@@ -307,7 +313,8 @@ namespace Unit_Testovi
         }
         #endregion
         #region Testovi za klasu Chat
-
+        //Amira Krtagic
+        //test ispituje da li metoda baca izuzetak ako se datum pocetka chata postavi u buducnosti
         [TestMethod] 
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestZaDatumPocetakChataIzuzetak()
@@ -324,6 +331,8 @@ namespace Unit_Testovi
             chat.PocetakChata = value;
         }
 
+        //Amira Kurtagic
+        //provjeravamo da li ce doci do izuzetka ukoliko se proslijedi datum za najnoviju poruku u buducnosti
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestZaDatumNajnovijaPorukaIzuzetak()
@@ -622,6 +631,8 @@ namespace Unit_Testovi
         #endregion
         #region Testovi za klasu Grupni chat
 
+        //Arijana Čolak
+        //ispituje da li kontruktor pravi novu listu ukuliko se kao parametar proslijedi null
         [TestMethod]
         public void TestZaKonstruktor()
         {
