@@ -1,1 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Korisnici>
+  <Korisnik>
+    <ime>user1</ime>
+    <password>user</password>
+    <lokacija>Sarajevo</lokacija>
+    <zeljena_lokacija>Sarajevo</zeljena_lokacija>
+    <godine>25</godine>
+    <razvod>true</razvod>
+    <min_zeljene_godine>15</min_zeljene_godine>
+    <max_zeljene_godine>28</max_zeljene_godine>
+  </Korisnik>
+</Korisnici>

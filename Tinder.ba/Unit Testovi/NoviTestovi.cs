@@ -86,6 +86,43 @@ namespace Unit_Testovi
 
             int potencijal = t.PotencijalChata(chat);
         }
+        [TestMethod]
+        public void TestPotencijalChataIspodNule()
+        {
+            Korisnik k1 = new Korisnik("user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+            Korisnik k2 = new Korisnik("user2", "user2*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+            Korisnik k3 = new Korisnik("user3", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+
+            Tinder.ba.Tinder t = new Tinder.ba.Tinder();
+            t.DodavanjeRazgovora(new List<Korisnik>() { k1, k2 }, false);
+            Chat chat = t.Razgovori[0];
+            chat.Poruke.Add(new Poruka(k1, k2, "udata sam!"));
+            chat.Poruke.Add(new Poruka(k2, k1, "bježi, neću!"));
+            int potencijal = t.PotencijalChata(chat);
+
+            Assert.AreEqual(potencijal, 0);
+        }
+
+        [TestMethod]
+        public void TestPotencijalChataIznadSto()
+        {
+            Korisnik k1 = new Korisnik("user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+            Korisnik k2 = new Korisnik("user2", "user2*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+            Korisnik k3 = new Korisnik("user3", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+
+            Tinder.ba.Tinder t = new Tinder.ba.Tinder();
+            t.DodavanjeRazgovora(new List<Korisnik>() { k1, k2 }, false);
+            Chat chat = t.Razgovori[0];
+            chat.Poruke.Add(new Poruka(k1, k2, "volim te!"));
+            chat.Poruke.Add(new Poruka(k2, k1, "volim i ja tebe, to mora da je ljubav!"));
+            chat.Poruke.Add(new Poruka(k1, k2, "slobodan sam, jesi li ti slobodna?"));
+            chat.Poruke.Add(new Poruka(k2, k1, "slobodna sam i hoću tebe"));
+            int potencijal = t.PotencijalChata(chat);
+
+            Assert.AreEqual(potencijal, 100);
+        }
+
+
 
         //Ajla Habib
         //ispituje velicinu liste(bez duplikata) ukoliko su dati kompatibilni korisnici
@@ -213,6 +250,17 @@ namespace Unit_Testovi
             Assert.AreEqual(t.Razgovori.Count, 0);
         }
 
+        [TestMethod]
+        public void TestRadSaKorisnikomDodavanjeKorisnika()
+        {
+            Korisnik k1 = new Korisnik("user12", "user12*+", Lokacija.Bihać, Lokacija.Mostar, 23, false);
+            Korisnik k2 = new Korisnik("user13", "user13*+", Lokacija.Zenica, Lokacija.Tuzla, 28, true);
+            Tinder.ba.Tinder t = new Tinder.ba.Tinder();
+            t.Korisnici.Add(k1);
+            t.RadSaKorisnikom(k2, 0);
+            Assert.AreEqual(t.Korisnici.Count, 2);
+        }
+
         //Arijana Čolak
         //provjeravamo da li ce baciti izuzetak ukoliko posaljemo listu manju od 2 elementa
         [TestMethod]
@@ -259,6 +307,38 @@ namespace Unit_Testovi
         }
         #endregion
         #region Testovi za klasu Chat
+
+        [TestMethod] 
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void TestZaDatumPocetakChataIzuzetak()
+        {
+            Korisnik k1 = new Korisnik("user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+            Korisnik k2 = new Korisnik("user2", "user2*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+
+            Tinder.ba.Tinder t = new Tinder.ba.Tinder();
+            t.DodavanjeRazgovora(new List<Korisnik>() { k1, k2 }, false);
+            Chat chat = t.Razgovori[0];
+            chat.Poruke.Add(new Poruka(k1, k2, "volim te!"));
+            chat.Poruke.Add(new Poruka(k2, k1, "volim i ja tebe, to mora da je ljubav!"));
+            DateTime value = new DateTime(2020, 12, 31);
+            chat.PocetakChata = value;
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void TestZaDatumNajnovijaPorukaIzuzetak()
+        {
+            Korisnik k1 = new Korisnik("user1", "user1*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+            Korisnik k2 = new Korisnik("user2", "user2*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
+
+            Tinder.ba.Tinder t = new Tinder.ba.Tinder();
+            t.DodavanjeRazgovora(new List<Korisnik>() { k1, k2 }, false);
+            Chat chat = t.Razgovori[0];
+            chat.Poruke.Add(new Poruka(k1, k2, "volim te!"));
+            chat.Poruke.Add(new Poruka(k2, k1, "bježi, to je neistina"));
+            DateTime value = new DateTime(2021, 03, 03);
+            chat.NajnovijaPoruka = value;
+        }
         //Amira Kurtagic
         //provjerava velicinu liste ukoliko ima jedna poruka gdje je posiljalac k1
         [TestMethod]
@@ -333,7 +413,7 @@ namespace Unit_Testovi
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
 
-        public void TestSadržajaPorukeIzuzetak()
+        public void TestSadrzajaPorukeIzuzetak()
         {
             Korisnik k1 = new Korisnik("user2", "user2*+", Lokacija.Mostar, Lokacija.Bihać, 23, false);
             Korisnik k2 = new Korisnik("user3", "user3*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 25, false);
@@ -541,6 +621,14 @@ namespace Unit_Testovi
 
         #endregion
         #region Testovi za klasu Grupni chat
+
+        [TestMethod]
+        public void TestZaKonstruktor()
+        {
+            GrupniChat chat = new GrupniChat(null);
+            Assert.AreEqual(chat.Korisnici.Count, 0);
+  
+        }
         //Arijana Čolak
         //provjerava bacanje izuzetka ukoliko se proslijedi prazan string
         [TestMethod]
