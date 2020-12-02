@@ -9,6 +9,7 @@ namespace Unit_Testovi
     public class NoviTestovi
     {
 
+        #region Data atributi
         static IEnumerable<object[]> Data
         {
             get
@@ -47,6 +48,7 @@ namespace Unit_Testovi
                 };
             }
         }
+        #endregion
         #region Zamjenski Objekti
         public class Stub : IRecenzija
         {
@@ -137,7 +139,7 @@ namespace Unit_Testovi
             t.DodavanjeRazgovora(new List<Korisnik>() { k1, k2 }, false);
             Chat chat = t.Razgovori[0];
             chat.Poruke.Add(new Poruka(k1, k2, "udata sam!"));
-            chat.Poruke.Add(new Poruka(k2, k1, "bježi, neću!"));
+            chat.Poruke.Add(new Poruka(k2, k1, "bježi, neću, to je neistina!"));
             int potencijal = t.PotencijalChata(chat);
 
             Assert.AreEqual(potencijal, 0);
@@ -738,7 +740,7 @@ namespace Unit_Testovi
             r.DajUtisak();
         }
         #endregion
-
+        #region Data Driven testovi
         //Arijana Čolak
         //provjeravamo ispravnost postavljanja proslijedjenog imena
         [TestMethod]
@@ -798,7 +800,7 @@ namespace Unit_Testovi
         {
             Korisnik k = new Korisnik(name, pass, location, desiredLoc, age, divorced);
         }
-
+        #endregion
     }
 
 }
