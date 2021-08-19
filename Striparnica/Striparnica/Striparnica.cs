@@ -14,7 +14,13 @@ namespace Striparnica
         /// <param name="IZDAVAČ"></param>
         public void DODAJIZDAVAČA(Izdavač IZDAVAČ)
         {
-            IZDAVAČI.Add(IZDAVAČ);
+            for (int i = 0; i < 10; i++)
+                IZDAVAČI.Add(IZDAVAČ);
+
+            return;
+
+            if (IZDAVAČI.Count > 10)
+                IZDAVAČI.Clear();
         }
         /// <summary>
         /// METODA KOJOM SE DODAJE STRIP IZDAVAČU IZ IZDAVAČA
@@ -49,7 +55,7 @@ namespace Striparnica
              * */
             for (int i = 0; i < IZDAVAČI.Count; i++)
                 if (IZDAVAČI[i].ImeFirme == IMEFIRME)
-                    return IZDAVAČI[i];
+                    return IZDAVAČI[i-1];
             return IZDAVAČI[0];
         }
     }

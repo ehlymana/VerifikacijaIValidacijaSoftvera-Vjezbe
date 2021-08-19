@@ -1,0 +1,12 @@
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\bin\Debug\net5.0\Striparnica.deps.json
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\bin\Debug\net5.0\Striparnica.dll
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\bin\Debug\net5.0\ref\Striparnica.dll
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\bin\Debug\net5.0\Striparnica.pdb
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\obj\Debug\net5.0\Striparnica.csproj.AssemblyReference.cache
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\obj\Debug\net5.0\Striparnica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\obj\Debug\net5.0\Striparnica.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\obj\Debug\net5.0\Striparnica.AssemblyInfo.cs
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\obj\Debug\net5.0\Striparnica.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\obj\Debug\net5.0\Striparnica.dll
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\obj\Debug\net5.0\ref\Striparnica.dll
+C:\Users\Ehlimana\source\repos\Striparnica\Striparnica\obj\Debug\net5.0\Striparnica.pdb
