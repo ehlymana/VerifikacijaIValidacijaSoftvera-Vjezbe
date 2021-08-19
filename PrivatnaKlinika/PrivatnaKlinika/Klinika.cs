@@ -104,22 +104,6 @@ namespace PrivatnaKlinika
         {
             Pacijenti.Add(p);
         }
-        public void registracijaHitnogPacijenta(string ime, string prezime, DateTime rodenje, string maticni, string spol, string adresa, string brak, string zeljeniPregled, string brojKnjizice, DateTime prijem, string pomoc, string razlog)
-        {
-            Pacijenti.Add(new HitniPacijent(ime, prezime, rodenje, maticni, spol, adresa, brak, zeljeniPregled, prijem, brojKnjizice, pomoc, razlog));
-        }
-        public void registracijaHitnogPacijenta(HitniPacijent p)
-        {
-            Pacijenti.Add(p);
-        }
-        public void registracijaHitnogPacijenta2(string ime, string prezime, DateTime rodenje, string maticni, string spol, string adresa, string brak, string zeljeniPregled, string brojKnjizice, DateTime prijem, string pomoc, string razlog, DateTime vrijeme, DateTime obdukcija, string uzrok)
-        {
-            Pacijenti.Add(new HitniPacijent(ime, prezime, rodenje, maticni, spol, adresa, brak, zeljeniPregled, prijem, brojKnjizice, pomoc, razlog, vrijeme, obdukcija, uzrok));
-        }
-        public void registracijaHitnogPacijenta2(HitniPacijent p)
-        {
-            Pacijenti.Add(p);
-        }
         public void registracijaMOsoblja(string ime, string prezime, string username, string password, Ordinacija o)
         {
             MOsoblje.Add(new MedicinskoOsoblje(ime, prezime, username, password, o));
