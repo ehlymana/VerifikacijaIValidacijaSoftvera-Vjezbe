@@ -23,7 +23,8 @@ namespace PrivatnaKlinika
 
             set
             {
-                if (String.IsNullOrEmpty(value)) throw new FormatException("Ime ne smije biti prazno!");
+                if (value.Length < 2)
+                    throw new InvalidOperationException("Neispravna dužina imena!");
                 ime = value;
             }
         }
@@ -37,7 +38,8 @@ namespace PrivatnaKlinika
 
             set
             {
-                if (String.IsNullOrEmpty(value)) throw new FormatException("Prezime ne smije biti prazno!");
+                if (value.Length < 2)
+                    throw new InvalidOperationException("Neispravna dužina prezimena!");
                 prezime = value;
             }
         }
@@ -51,7 +53,11 @@ namespace PrivatnaKlinika
 
             set
             {
-                if (String.IsNullOrEmpty(value) || value.Length != 13) throw new FormatException("Matični broj ima tačno 13 karaktera!");
+                int dan = Int32.Parse(value.Substring(0, 2)),
+                    mjesec = Int32.Parse(value.Substring(2, 2)),
+                    godina = Int32.Parse(value.Substring(4, 3));
+                if (dan < 1 || dan > 31 || mjesec < 1 || mjesec > 12 || godina < 0 || godina > DateTime.Now.Year - 1000)
+                    throw new InvalidOperationException("Neispravan matični broj!");
                 maticni = value;
             }
         }
@@ -65,7 +71,8 @@ namespace PrivatnaKlinika
 
             set
             {
-                if (value != "M" && value != "Ž") throw new FormatException("Spol se unosi kao M ili Ž!");
+                if (value != "M" && value != "Ž")
+                    throw new InvalidOperationException("Neispravna oznaka za spol!");
                 spol = value;
             }
         }
@@ -79,7 +86,6 @@ namespace PrivatnaKlinika
 
             set
             {
-                if (String.IsNullOrEmpty(value)) throw new FormatException("Adresa ne smije biti prazna!");
                 adresa = value;
             }
         }
@@ -106,6 +112,8 @@ namespace PrivatnaKlinika
 
             set
             {
+                if (!value.StartsWith("ZD-"))
+                    throw new InvalidOperationException("Neispravan format zdravstvene knjižice!");
                 zdravstvenaKnjizica = value;
             }
         }
@@ -119,6 +127,8 @@ namespace PrivatnaKlinika
 
             set
             {
+                if (value > DateTime.Now)
+                    throw new InvalidOperationException("Datum rođenja ne može biti u budućnosti!");
                 rodenje = value;
             }
         }

@@ -24,9 +24,9 @@ namespace PrivatnaKlinika
             moguciPregledi.Add("Opći");
             moguciPregledi.Add("Sistematski");
             moguciPregledi.Add("Ljekarski");
-            Ordinacija o1 = new Ordinacija("Opća");
-            Ordinacija o2 = new Ordinacija("Radiološka");
-            Ordinacija o3 = new Ordinacija("Hirurška");
+            Ordinacija o1 = new Ordinacija("Opća", false, false);
+            Ordinacija o2 = new Ordinacija("Radiološka", false, false);
+            Ordinacija o3 = new Ordinacija("Hirurška", false, false);
             ordinacije.Add(o1);
             ordinacije.Add(o2);
             ordinacije.Add(o3);
@@ -104,22 +104,6 @@ namespace PrivatnaKlinika
         {
             Pacijenti.Add(p);
         }
-        public void registracijaHitnogPacijenta(string ime, string prezime, DateTime rodenje, string maticni, string spol, string adresa, string brak, string zeljeniPregled, string brojKnjizice, DateTime prijem, string pomoc, string razlog)
-        {
-            Pacijenti.Add(new HitniPacijent(ime, prezime, rodenje, maticni, spol, adresa, brak, zeljeniPregled, prijem, brojKnjizice, pomoc, razlog));
-        }
-        public void registracijaHitnogPacijenta(HitniPacijent p)
-        {
-            Pacijenti.Add(p);
-        }
-        public void registracijaHitnogPacijenta2(string ime, string prezime, DateTime rodenje, string maticni, string spol, string adresa, string brak, string zeljeniPregled, string brojKnjizice, DateTime prijem, string pomoc, string razlog, DateTime vrijeme, DateTime obdukcija, string uzrok)
-        {
-            Pacijenti.Add(new HitniPacijent(ime, prezime, rodenje, maticni, spol, adresa, brak, zeljeniPregled, prijem, brojKnjizice, pomoc, razlog, vrijeme, obdukcija, uzrok));
-        }
-        public void registracijaHitnogPacijenta2(HitniPacijent p)
-        {
-            Pacijenti.Add(p);
-        }
         public void registracijaMOsoblja(string ime, string prezime, string username, string password, Ordinacija o)
         {
             MOsoblje.Add(new MedicinskoOsoblje(ime, prezime, username, password, o));
@@ -136,33 +120,38 @@ namespace PrivatnaKlinika
         {
             p.Karton=new Karton(sadasnjeBolesti, sadasnjeAlergije, ranijeBolesti, ranijeAlergije, stanjePorodice, zakljucak, preuzeo);
         }
-        public void zakaziPregled(Pacijent p, Ordinacija pregled)
+        public void zakaziPregled(Pacijent p, Ordinacija ordinacija)
         {
-            if (pregled != null)
+            if (ordinacija != null)
             {
-                if (pregled.UKvaru) throw new InvalidOperationException("Ordinacija ne radi - aparatura u kvaru");
-                else if (pregled.PrivremenoZatvori) throw new InvalidOperationException("Ordinacija ne radi - privremeno zatvorena");
-                else pregled.dodajPacijenta(p);
+                if (ordinacija.UKvaru) throw new InvalidOperationException("Ordinacija ne radi - aparatura u kvaru");
+                else if (ordinacija.PrivremenoZatvori) throw new InvalidOperationException("Ordinacija ne radi - privremeno zatvorena");
+                else ordinacija.dodajPacijenta(p);
             }
             List<ZakazaniPregled> zakazani = new List<ZakazaniPregled>();
             if (!p.ZeljeniPregled.Equals("Opći"))
             {
                 if (p.ZeljeniPregled.Equals("Sistematski"))
                 {
-                    zakazani.Add(new ZakazaniPregled(Ordinacije.Find(x => x.Ime.Equals("Opća"))));
-                    Ordinacije.Find(x => x.Ime.Equals("Opća")).dodajPacijenta(p);
-                    zakazani.Add(new ZakazaniPregled(Ordinacije.Find(x => x.Ime.Equals("Hirurška"))));
-                    Ordinacije.Find(x => x.Ime.Equals("Hirurška")).dodajPacijenta(p);
+                    if (ordinacija.Ime == "Kardiološka")
+                        zakazani.Add(new ZakazaniPregled(ordinacija));
+                    else
+                        zakazani.Add(new ZakazaniPregled(ordinacije.Find(o => o.Ime == "Kardiološka")));
                 }
                 else
                 {
-                    zakazani.Add(new ZakazaniPregled(Ordinacije.Find(x => x.Ime.Equals("Hirurška"))));
-                    Ordinacije.Find(x => x.Ime.Equals("Hirurška")).dodajPacijenta(p);
-                    zakazani.Add(new ZakazaniPregled(Ordinacije.Find(x => x.Ime.Equals("Opća"))));
-                    Ordinacije.Find(x => x.Ime.Equals("Opća")).dodajPacijenta(p);
+                    if (ordinacija.Ime == "Internistička" || p.BrojPosjeta < 10)
+                        throw new InvalidOperationException("Pacijentu ne može biti pružena tražena usluga!");
+                    else if (p.Rodenje.Year + 70 < DateTime.Now.Year)
+                    {
+                        ordinacija.PacijentiURedu.Insert(0, p);
+                        zakazani.Add(new ZakazaniPregled(ordinacija));
+                    }
+                    else
+                        zakazani.Add(new ZakazaniPregled(ordinacija));
                 }
             }
-            else zakazani.Add(new ZakazaniPregled(pregled));
+            else zakazani.Add(new ZakazaniPregled(ordinacija));
             foreach (ZakazaniPregled z in zakazani) p.Karton.dodajZakazaniPregled(z);
         }
         public void vrsenjePregleda(Pacijent p, string misljenje, string rezultat, string terapija, string garancija, bool dugorocna, DateTime datum, ZakazaniPregled dodatniPregled, MedicinskoOsoblje doktor)

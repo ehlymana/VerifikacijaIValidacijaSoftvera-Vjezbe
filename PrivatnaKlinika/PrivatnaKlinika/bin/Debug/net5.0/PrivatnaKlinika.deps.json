@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PrivatnaKlinika/1.0.0": {
+        "runtime": {
+          "PrivatnaKlinika.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PrivatnaKlinika/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

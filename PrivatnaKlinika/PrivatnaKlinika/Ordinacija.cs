@@ -78,9 +78,11 @@ namespace PrivatnaKlinika
             }
         }
 
-        public Ordinacija (string i)
+        public Ordinacija (string i, bool kvar, bool zatvorena)
         {
             Ime = i;
+            UKvaru = kvar;
+            PrivremenoZatvori = zatvorena;
             pacijentiURedu = new List<Pacijent>();
         }
         public void dodajPacijenta (Pacijent p)
