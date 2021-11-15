@@ -25,6 +25,7 @@ namespace BrowserSerija
         public static int MaksimalniZabilježeniBrojGledalaca { get => maksimalniZabilježeniBrojGledalaca; }
 
         #endregion
+        
 
         #region Konstruktor
 
