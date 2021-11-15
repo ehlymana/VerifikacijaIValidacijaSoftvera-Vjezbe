@@ -9,6 +9,7 @@ namespace BrowserSerija
     public interface IBazaFilmova
     {
         public List<string> GlumciSerije(string serija);
+        
     }
 
     public class BazaFilmova : IBazaFilmova
