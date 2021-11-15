@@ -1,0 +1,12 @@
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\bin\Debug\net5.0\BrowserSerija.deps.json
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\bin\Debug\net5.0\BrowserSerija.dll
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\bin\Debug\net5.0\ref\BrowserSerija.dll
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\bin\Debug\net5.0\BrowserSerija.pdb
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\obj\Debug\net5.0\BrowserSerija.csproj.AssemblyReference.cache
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\obj\Debug\net5.0\BrowserSerija.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\obj\Debug\net5.0\BrowserSerija.AssemblyInfoInputs.cache
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\obj\Debug\net5.0\BrowserSerija.AssemblyInfo.cs
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\obj\Debug\net5.0\BrowserSerija.csproj.CoreCompileInputs.cache
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\obj\Debug\net5.0\BrowserSerija.dll
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\obj\Debug\net5.0\ref\BrowserSerija.dll
+C:\Users\Ehlimana\Desktop\BrowserSerija\BrowserSerija\obj\Debug\net5.0\BrowserSerija.pdb
