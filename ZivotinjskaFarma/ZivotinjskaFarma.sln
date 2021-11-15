@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZivotinjskaFarma", "ZivotinjskaFarma\ZivotinjskaFarma.csproj", "{2F0B6F94-79BF-4F3C-9F3B-F913CB3D1FEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zadatak 2", "Zadatak 2\Zadatak 2.csproj", "{6906562D-AF97-4440-B84E-E7D17A63CE16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F0B6F94-79BF-4F3C-9F3B-F913CB3D1FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0B6F94-79BF-4F3C-9F3B-F913CB3D1FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0B6F94-79BF-4F3C-9F3B-F913CB3D1FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0B6F94-79BF-4F3C-9F3B-F913CB3D1FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6906562D-AF97-4440-B84E-E7D17A63CE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6906562D-AF97-4440-B84E-E7D17A63CE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6906562D-AF97-4440-B84E-E7D17A63CE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6906562D-AF97-4440-B84E-E7D17A63CE16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56FEA6C9-857D-4D37-AE12-9FFFF4B1D12D}
+	EndGlobalSection
+EndGlobal
