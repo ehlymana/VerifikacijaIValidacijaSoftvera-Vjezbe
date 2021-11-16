@@ -112,7 +112,7 @@ namespace ZivotinjskaFarma
         {
             List<Zivotinja> sveZivotinjeZaVeterinara = zivotinje.FindAll(z => z.Proizvođač == false);
 
-            foreach(Zivotinja zivotinja in sveZivotinjeZaVeterinara)
+            foreach (Zivotinja zivotinja in sveZivotinjeZaVeterinara)
             {
                 if (v.ocjenaZdravstvenogStanjaZivotinje(zivotinja) > 4)
                 {
@@ -158,7 +158,46 @@ namespace ZivotinjskaFarma
         /// <returns></returns>
         public double ObračunajPorez()
         {
-            throw new NotImplementedException();
+            int osnovica = 10;
+            if (lokacije.Count == 0)
+            {
+                return 0;
+            }
+            double porez = 0;
+            float koeficijentPoreza = 0;
+            foreach (Lokacija lokacija in lokacije)
+            {
+                koeficijentPoreza = 0;
+                if (lokacija.Površina > 10000)
+                {
+                    koeficijentPoreza += 0.2f;
+                }
+                if (lokacija.Površina >= 1000 && lokacija.Površina <= 10000)
+                {
+                    if (lokacija.Država == "Bosna i Hercegovina")
+                    {
+                        koeficijentPoreza = koeficijentPoreza + 0.15f;
+                    }
+                    else
+                    {
+                        koeficijentPoreza += 0.5f;
+                    }
+
+                }
+                if (lokacija.Površina < 1000)
+                {
+                    if (new string[] { "Sarajevo", "Tuzla", "Zenica", "Mostar" }.Contains(lokacija.Grad))
+                    {
+                        koeficijentPoreza += 0.1f;
+                    }
+                    else
+                    {
+                        koeficijentPoreza += 0.3f;
+                    }
+                }
+                porez += osnovica * koeficijentPoreza;
+            }
+            return porez;
         }
 
         #endregion
