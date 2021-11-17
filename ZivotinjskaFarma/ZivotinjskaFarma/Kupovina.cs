@@ -55,8 +55,12 @@ namespace ZivotinjskaFarma
         /// potrebno je vratiti FALSE, a u suprotnom je potrebno vratiti TRUE.
         /// </summary>
         /// <returns></returns>
-        public bool VerificirajKupovinu()
+        public bool VerificirajKupovinu() // Amer Hrnjič
         {
+
+            if (KupljeniProizvod.KoličinaNaStanju < Kolicina) return false;
+            if ((KupljeniProizvod.Vrsta == "Mlijeko" || KupljeniProizvod.Vrsta == "Jaja" || KupljeniProizvod.Vrsta == "Sir") && (RokIsporuke < 2 || RokIsporuke > 7)) return false;
+            if (KupljeniProizvod.Vrsta == "Vuna" && RokIsporuke < 30) return false;
             //throw new NotImplementedException();
             return true;
         }
