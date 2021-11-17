@@ -156,6 +156,7 @@ namespace ZivotinjskaFarma
         /// Ukoliko nije definisana nijedna lokacija, potrebno je vratiti iznos od 0 KM.
         /// </summary>
         /// <returns></returns>
+        /// metodu implementirao Kerim Nurikic
         public double ObračunajPorez()
         {
             int osnovica = 10;
