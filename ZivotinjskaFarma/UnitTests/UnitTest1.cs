@@ -8,6 +8,7 @@ namespace UnitTests
         [TestMethod]
         public void TestMethod1()
         {
+            int a;
         }
     }
 }
