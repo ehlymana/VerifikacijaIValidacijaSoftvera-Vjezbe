@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IqwmaxYw3wwqDeaDG7SdTf2Hwet64APjSiPkarT0XmexSqRunE1N9btiUb1Ex4Phc/7qwC0l+yrwT+40P8fFlQ==",
+  "dgSpecHash": "QrYWdmbAj4pFlGe9MQ/8agzyo0n9FSnNTWHaYs75nDhuAHWJS7QxFpN5vkFdAVszJ5gbb4mGWKd9F947/3xpag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ehlimana\\source\\repos\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj",
+  "projectFilePath": "C:\\Users\\Ehlimana\\Documents\\GitHub\\VerifikacijaIValidacijaSoftvera-Vjezbe\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ehlimana\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\Ehlimana\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

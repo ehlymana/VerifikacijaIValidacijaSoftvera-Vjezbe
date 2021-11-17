@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ehlimana\\source\\repos\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj": {}
+    "C:\\Users\\Ehlimana\\Documents\\GitHub\\VerifikacijaIValidacijaSoftvera-Vjezbe\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ehlimana\\source\\repos\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj": {
+    "C:\\Users\\Ehlimana\\Documents\\GitHub\\VerifikacijaIValidacijaSoftvera-Vjezbe\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ehlimana\\source\\repos\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj",
+        "projectUniqueName": "C:\\Users\\Ehlimana\\Documents\\GitHub\\VerifikacijaIValidacijaSoftvera-Vjezbe\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj",
         "projectName": "SistemZaGrijanje",
-        "projectPath": "C:\\Users\\Ehlimana\\source\\repos\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj",
+        "projectPath": "C:\\Users\\Ehlimana\\Documents\\GitHub\\VerifikacijaIValidacijaSoftvera-Vjezbe\\SistemZaGrijanje\\SistemZaGrijanje\\SistemZaGrijanje.csproj",
         "packagesPath": "C:\\Users\\Ehlimana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ehlimana\\source\\repos\\SistemZaGrijanje\\SistemZaGrijanje\\obj\\",
+        "outputPath": "C:\\Users\\Ehlimana\\Documents\\GitHub\\VerifikacijaIValidacijaSoftvera-Vjezbe\\SistemZaGrijanje\\SistemZaGrijanje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ehlimana\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

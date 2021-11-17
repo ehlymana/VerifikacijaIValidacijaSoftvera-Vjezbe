@@ -15,7 +15,7 @@ namespace SistemZaGrijanje
         public void TestDeaktivacijeGrijanja()
         {
             KontrolerGrijanja k = new KontrolerGrijanja();
-            ITermostat dummy = new Dummy();
+            Dummy dummy = new Dummy();
 
             k.Aktivna = true;
             k.AutomatskaKontrola(dummy, false);
@@ -30,15 +30,15 @@ namespace SistemZaGrijanje
         {
             KontrolerGrijanja k = new KontrolerGrijanja();
 
-            ITermostat stub1 = new StubNiskaTemperatura();
+            StubNiskaTemperatura stub1 = new StubNiskaTemperatura();
             k.AutomatskaKontrola(stub1, true);
             Assert.AreEqual(k.JačinaGrijanja, 1);
 
-            ITermostat stub2 = new StubSrednjaTemperatura();
+            StubSrednjaTemperatura stub2 = new StubSrednjaTemperatura();
             k.AutomatskaKontrola(stub2, true);
             Assert.AreEqual(k.JačinaGrijanja, 0.5);
 
-            ITermostat stub3 = new StubVisokaTemperatura();
+            StubVisokaTemperatura stub3 = new StubVisokaTemperatura();
             k.AutomatskaKontrola(stub3, true);
             Assert.AreEqual(k.JačinaGrijanja, 0);
         }
@@ -50,17 +50,17 @@ namespace SistemZaGrijanje
         public void TestKontroleGrijanja2()
         {
             KontrolerGrijanja k = new KontrolerGrijanja();
-            ITermostat spy = new Spy();
+            Spy spy = new Spy();
 
-            ((Spy)spy).Opcija = 0;
+            spy.Opcija = 0;
             k.AutomatskaKontrola(spy, true);
             Assert.AreEqual(k.JačinaGrijanja, 1);
 
-            ((Spy)spy).Opcija = 1;
+            spy.Opcija = 1;
             k.AutomatskaKontrola(spy, true);
             Assert.AreEqual(k.JačinaGrijanja, 0.5);
 
-            ((Spy)spy).Opcija = 2;
+            spy.Opcija = 2;
             k.AutomatskaKontrola(spy, true);
             Assert.AreEqual(k.JačinaGrijanja, 0);
         }
@@ -72,7 +72,7 @@ namespace SistemZaGrijanje
         public void TestUsrednjavanjaJačineGrijanja()
         {
             KontrolerGrijanja k = new KontrolerGrijanja();
-            ITermostat fake = new Fake();
+            Fake fake = new Fake();
 
             fake.Temperature = new List<double>()
             {
@@ -82,7 +82,7 @@ namespace SistemZaGrijanje
             double očekivaniRezultat = Math.Abs(30 - fake.Temperature.Average()) / fake.Temperature.Average();
             Assert.IsTrue(Math.Abs(k.JačinaGrijanja - očekivaniRezultat) < 0.01);
 
-            očekivaniRezultat = ((Fake)fake).DodajTestneTemperature();
+            očekivaniRezultat = fake.DodajTestneTemperature();
             k.Usrednjavanje(fake);
             Assert.IsTrue(Math.Abs(k.JačinaGrijanja - očekivaniRezultat) < 0.01);
         }
@@ -94,7 +94,7 @@ namespace SistemZaGrijanje
         public void TestDefrostTehnologijeOK()
         {
             KontrolerGrijanja k = new KontrolerGrijanja();
-            ITermostat mock = new Mock();
+            Mock mock = new Mock();
 
             KontrolerGrijanja.IndikatorVode = "OK";
             k.AutomatskaKontrola(mock, true);
@@ -109,7 +109,7 @@ namespace SistemZaGrijanje
         public void TestDefrostTehnologijeNeočekivanoPonašanje()
         {
             KontrolerGrijanja k = new KontrolerGrijanja();
-            ITermostat mock = new Mock();
+            Mock mock = new Mock();
             k.AutomatskaKontrola(mock, true);
         }
     }

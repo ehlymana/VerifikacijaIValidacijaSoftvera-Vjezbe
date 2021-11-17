@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.9212598425196851" branch-rate="0.8636363636363636" lines-covered="117" lines-valid="127" branches-covered="19" branches-valid="22" complexity="42" version="0" timestamp="1629563773">
+<coverage line-rate="0.9212598425196851" branch-rate="0.8636363636363636" lines-covered="117" lines-valid="127" branches-covered="19" branches-valid="22" complexity="42" version="0" timestamp="1637143830">
   <sources>
     <source>C:\Users\Ehlimana\</source>
   </sources>
@@ -19,7 +19,7 @@
             <line number="4" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.Fake" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\Fake.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="SistemZaGrijanje.Fake" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\Fake.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="get_Temperature" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -49,7 +49,7 @@
             <line number="20" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.ITermostat" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\ITermostat.cs" line-rate="0" branch-rate="1" complexity="3">
+        <class name="SistemZaGrijanje.ITermostat" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\ITermostat.cs" line-rate="0" branch-rate="1" complexity="3">
           <methods>
             <method name="get_Temperature" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -79,7 +79,7 @@
             <line number="24" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.KontrolerGrijanja" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\KontrolerGrijanja.cs" line-rate="0.9375" branch-rate="0.875" complexity="20">
+        <class name="SistemZaGrijanje.KontrolerGrijanja" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\KontrolerGrijanja.cs" line-rate="0.9375" branch-rate="0.875" complexity="20">
           <methods>
             <method name="get_IndikatorVode" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -173,7 +173,7 @@
             <line number="54" hits="22" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.Mock" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\Mock.cs" line-rate="0.8" branch-rate="0.5" complexity="2">
+        <class name="SistemZaGrijanje.Mock" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\Mock.cs" line-rate="0.8" branch-rate="0.5" complexity="2">
           <methods>
             <method name="dajTemperaturu" signature="()" line-rate="0.8" branch-rate="0.5" complexity="2">
               <lines>
@@ -193,7 +193,7 @@
             <line number="17" hits="22" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.Spy" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\Spy.cs" line-rate="1" branch-rate="1" complexity="5">
+        <class name="SistemZaGrijanje.Spy" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\Spy.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name="get_Opcija" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -223,7 +223,7 @@
             <line number="20" hits="35" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.StubNiskaTemperatura" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\Stub.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="SistemZaGrijanje.StubNiskaTemperatura" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\Stub.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="dajTemperaturu" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -239,7 +239,7 @@
             <line number="14" hits="11" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.StubSrednjaTemperatura" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\Stub.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="SistemZaGrijanje.StubSrednjaTemperatura" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\Stub.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="dajTemperaturu" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -255,7 +255,7 @@
             <line number="22" hits="12" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.StubVisokaTemperatura" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\Stub.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="SistemZaGrijanje.StubVisokaTemperatura" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\Stub.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="dajTemperaturu" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -271,7 +271,7 @@
             <line number="30" hits="12" branch="false" />
           </lines>
         </class>
-        <class name="SistemZaGrijanje.UnitTest1" filename="C:\Users\Ehlimana\source\repos\SistemZaGrijanje\SistemZaGrijanje\UnitTest1.cs" line-rate="1" branch-rate="1" complexity="6">
+        <class name="SistemZaGrijanje.UnitTest1" filename="C:\Users\Ehlimana\Desktop\SistemZaGrijanje\SistemZaGrijanje\UnitTest1.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
             <method name="TestDeaktivacijeGrijanja" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
