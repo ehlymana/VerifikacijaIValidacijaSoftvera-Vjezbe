@@ -85,6 +85,7 @@ namespace ZivotinjskaFarma
         /// U suprotnom, potrebno je izvršiti provjeru 3 najnovija pregleda i ukoliko je prosječna ocjena manja od 4,
         /// životinja prestaje biti proizvođač.
         /// </summary>
+        /// Implementacija Emina Basic
         public void ProvjeriStanjeZivotinje()
         {
             DateTime danasnjiDatum = DateTime.Now;
