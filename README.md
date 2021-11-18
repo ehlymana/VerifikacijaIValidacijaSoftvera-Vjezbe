@@ -8,5 +8,5 @@ Navigacija:
 - branch **lv2** - Unit Testiranje
 - branch **lv3** - Data-Driven Unit Testiranje
 - branch **lv4** - Zamjenski Objekti
-- branch **lv6** - Metrike, Refaktoring i Code Tuning Softvera
+- branch **lv5** - Metrike, Code Tuning i White Box Testiranje
 - branch **lv8** - Automatizovano Black-Box Testiranje
