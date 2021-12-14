@@ -21,7 +21,7 @@ namespace Priprema_za_Zadaću_3
         }
     }
 
-    public class Primjer5
+    public class Primjer1
     {
         List<Zaposlenik> uposlenici = new List<Zaposlenik>();
 
@@ -66,9 +66,9 @@ namespace Priprema_za_Zadaću_3
             for (int i = 0; i < Uposlenici.Count; i++)
             {
                 int godineOdPunoljetstva = DateTime.Now.Year - Uposlenici[i].DatumRodenja.Year - 18;
-                int gornjaGranicaPlate = godineOdPunoljetstva * 300;
+                int donjaGranicaPlate = godineOdPunoljetstva * 300;
 
-                if (Uposlenici[i].Plata < gornjaGranicaPlate)
+                if (Uposlenici[i].Plata < donjaGranicaPlate)
                     continue;
 
                 bool pronadenoIme = Uposlenici[i].Ime.Contains(naziv),
@@ -128,7 +128,6 @@ namespace Priprema_za_Zadaću_3
 
                 for (int j = 0; j < 300; j++)
                 {
-
                     plata11 += plata1;
                     plata22 += plata2;
                     plata33 += plata3;
@@ -161,22 +160,18 @@ namespace Priprema_za_Zadaću_3
     }
 
     [TestClass]
-    public class Primjer5Test
+    public class Primjer1Test
     {
         [TestMethod]
         public void TestTuning()
         {
-            Primjer5 klasa = new Primjer5();
-            for (int i = 0; i < 1000000; i++)
-                klasa.Uposlenici.Add(new Zaposlenik("Ime" + i, "Prezime", DateTime.Now.AddMonths(-18 * 12), 20 * 300));
+            Primjer1 klasa = new Primjer1();
+            for (int i = 0; i < 10000000; i++)
+                klasa.Uposlenici.Add(new Zaposlenik("Ime" + i, "Prezime",
+                    DateTime.Now.AddMonths(-19 * 12), 20 * 300));
 
-            // prvi breakpoint - prije poziva metode
             int x = 0;
-
-            // ovdje se poziva metoda koja se analizira - verzije sa tuningom ili bez
-            klasa.PretragaUposlenikaPoNazivu("Ime0");
-
-            // drugi breakpoint - nakon poziva metode
+            klasa.PretragaUposlenikaPoNazivuTuning4("Ime5000000");
             int y = 0;
 
             Assert.IsTrue(true);
