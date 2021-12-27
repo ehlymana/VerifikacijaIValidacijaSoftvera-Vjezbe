@@ -1,0 +1,52 @@
+﻿@model IEnumerable<FlightControlApp.Models.Let>
+
+<h1 style="text-align: center">RezervišiLet.ba - web-stranica za rezervaciju letova</h1>
+<img src="https://www.synecticsglobal.com/images/synectics-airport-security-solutions.jpg" style="width: 100%" />
+<h2 style="margin-top: 3%">Postojeće rezervacije:</h2>
+<table class="table" style="margin-top: 1%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BrojLeta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vrsta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odlazak)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Povratak)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plaćeno)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="brojLeta">
+                    @Html.DisplayFor(modelItem => item.BrojLeta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vrsta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Odlazak)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Povratak)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Plaćeno)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Create" class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Dodaj novu rezervaciju</a>
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
