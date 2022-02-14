@@ -1,0 +1,55 @@
+﻿@model FlightControlApp.Models.Let
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 style="text-align: center">Dodavanje nove rezervacije</h1>
+<img src="https://images.dailyhive.com/20191107165635/shutterstock_1065754316.jpg" style="width: 100%" />
+<h4 style="margin-top: 3%">Informacije o željenom letu:</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BrojLeta" class="control-label"></label>
+                <input asp-for="BrojLeta" class="form-control" />
+                <span asp-validation-for="BrojLeta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vrsta" class="control-label"></label>
+                <select asp-for="Vrsta" class="form-control" asp-items="Html.GetEnumSelectList<VrstaLeta>()"></select>
+                <span asp-validation-for="Vrsta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odlazak" class="control-label"></label>
+                <input asp-for="Odlazak" class="form-control" />
+                <span asp-validation-for="Odlazak" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Povratak" class="control-label"></label>
+                <input asp-for="Povratak" class="form-control" />
+                <span asp-validation-for="Povratak" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Plaćeno" /> @Html.DisplayNameFor(model => model.Plaćeno)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj novu rezervaciju" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Vrati se na prethodnu stranicu</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
