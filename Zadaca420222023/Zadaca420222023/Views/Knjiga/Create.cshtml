@@ -1,0 +1,86 @@
+﻿@model Zadaca420212022.Models.Knjiga
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<script>
+    function provjeriOpis(edicija, opis)
+    {
+        document.getElementById("create").style.background = '#0000FF';
+        var rezultat = "";
+        if (opis.value.length < 1)
+            rezultat = "Niste unijeli opis - analiza ne može biti izvršena!";
+        else if (edicija.value == "0" && !opis.value.includes("Beletristika"))
+            rezultat = "SC verzija je dozvoljena samo za beletrističke romane!";
+        else if (edicija.value == "2" || opis.value.includes("Klasična književnost"))
+        {
+            document.getElementById("create").style.background = '#efe6dd';
+            rezultat = "Uneseni opis zadovoljava standarde!";
+        }
+        document.getElementById("validacija").value = rezultat;
+    }
+</script>
+
+<h1>Create</h1>
+
+<h4>Knjiga</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ISBN" class="control-label"></label>
+                <input asp-for="ISBN" class="form-control" />
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NazivKnjige" class="control-label"></label>
+                <input asp-for="NazivKnjige" class="form-control" />
+                <span asp-validation-for="NazivKnjige" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImeAutora" class="control-label"></label>
+                <input asp-for="ImeAutora" class="form-control" />
+                <span asp-validation-for="ImeAutora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GodinaIzdavanja" class="control-label"></label>
+                <input asp-for="GodinaIzdavanja" class="form-control" />
+                <span asp-validation-for="GodinaIzdavanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EdicijaKnjige" class="control-label"></label>
+                <select asp-for="EdicijaKnjige" class="form-control" id="edicija" asp-items="Html.GetEnumSelectList<Edicija>()"></select>
+                <span asp-validation-for="EdicijaKnjige" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpisKnjige" class="control-label"></label>
+                <input asp-for="OpisKnjige" class="form-control" id="opis" />
+                <span asp-validation-for="OpisKnjige" class="text-danger"></span>
+                <button style="margin-top: 5%; margin-left: 35%; background='#0000FF'"
+                        onclick="provjeriOpis(document.getElementById('edicija'), document.getElementById('opis')); return false;"
+                        CausesValidation="False" UseSubmitBehavior="false"
+                        class="btn btn-primary">
+                Provjeri
+                </button>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" id="create" />
+            </div>
+            <div class="form-group">
+                <p>Informacije o provjeri:</p>
+                <input type="text" id="validacija" style="width: 500px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
